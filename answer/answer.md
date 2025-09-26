@@ -1,1 +1,1 @@
-put your answers here
+I prefer psh1 because for me i like that after each command it will catch an error if you have one and for me was little bit easier. 
