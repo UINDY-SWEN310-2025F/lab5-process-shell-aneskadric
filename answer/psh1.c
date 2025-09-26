@@ -33,19 +33,21 @@ int main() {
 
 // NOTE: use execvp to do it 
 int execute( char *arglist[] ) {
-	pid_t pid = fork(); 
 
-    if (pid < 0) {
-        fprintf(stderr, "Fork Failed\n");
-        return -1;
-    } else if (pid == 0) {
-        execvp(arglist[0], arglist); 
-        fprintf(stderr, "execvp failed\n");
-        exit(1); 
-    } else {
-        wait(NULL); 
-        return 0; 
-    }
+	execvp(arglist[0], arglist);
+	//pid_t pid = fork(); 
+
+    //if (pid < 0) {
+       // fprintf(stderr, "Fork Failed\n");
+       // return -1;
+    //} else if (pid == 0) {
+        //execvp(arglist[0], arglist); 
+       // fprintf(stderr, "execvp failed\n");
+       // exit(1); 
+    //} else {
+       // wait(NULL); 
+       // return 0; 
+    //}
 }
 
 // trim off newline and create storage for the string
